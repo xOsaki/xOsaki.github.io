@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Osaki</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lien pour la bibliothèque d'icônes -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#hero">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section Accueil -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Bienvenue, je suis <span>Osaki</span></h1>
+            <p>Développeur, Créateur et Passionné.</p>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="about">
+        <h2>À propos</h2>
+        <p>
+            Développeur passionné par le design web, j’allie créativité et technologie pour réaliser des projets
+            captivants.
+        </p>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projects">
+        <h2>Projets</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Mikasa</h3>
+                <p>Un bot multiusage pour Discord, développé avec amour et expertise.</p>
+                <a href="#" class="btn">En savoir plus</a>
+            </div>
+            <div class="project-card">
+                <h3>Portfolio Animé</h3>
+                <p>Un exemple interactif de portfolio moderne, parfait pour les créateurs.</p>
+                <a href="#" class="btn">En savoir plus</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Envie de collaborer ? Retrouvez-moi ici :</p>
+        <div class="social-icons">
+            <a href="mailto:xosaki17@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/xosaki" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://x.com/osakicrdbl" target="_blank"><i class="fab fa-x"></i></a>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 Osaki. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Animation GSAP -->
+    <script>
+        window.onload = () => {
+            gsap.from(".hero-content h1", { duration: 1, y: -50, opacity: 0 });
+            gsap.from(".hero-content p", { duration: 1.5, delay: 0.5, y: 50, opacity: 0 });
+            gsap.from(".project-card", {
+                scrollTrigger: {
+                    trigger: ".projects-grid",
+                    start: "top 80%",
+                },
+                duration: 1,
+                y: 100,
+                opacity: 0,
+                stagger: 0.2,
+            });
+        };
+    </script>
+</body>
+
+</html>
