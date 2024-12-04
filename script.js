@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     // Code d'animation de texte
     const textElement = document.querySelector('.typing-text');
     const text = textElement.textContent;
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const messageInput = document.querySelector('#message');
     const submitButton = document.querySelector('#submit');
 
-    form.addEventListener('submit', function (event) {
+    form.addEventListener('submit', function(event) {
         event.preventDefault();
         if (emailInput.value === '' || messageInput.value === '') {
             alert('Veuillez remplir tous les champs.');
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Scroll fluide
     const links = document.querySelectorAll('.nav-links a');
     links.forEach(link => {
-        link.addEventListener('click', function (event) {
+        link.addEventListener('click', function(event) {
             event.preventDefault();
             const targetId = link.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
